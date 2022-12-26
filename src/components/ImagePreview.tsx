@@ -1,9 +1,8 @@
 import { useState } from "react";
 
 type ImagePreviewProps = {
-  src: "string";
-  color: "string";
-  onLoaded: () => {};
+  src?: string;
+  color?: string;
 };
 
 function ImagePreview(props: ImagePreviewProps) {
@@ -11,9 +10,16 @@ function ImagePreview(props: ImagePreviewProps) {
   const [loading, setLoading] = useState(false);
 
   return (
-    <div>
-      <div style={{ backgroundColor: color }} />
-      <div>{src && <img src={src} />}</div>
+    <div
+      className="w-1/2 flex justify-center items-center"
+      style={{ backgroundColor: color }}
+    >
+      {src && (
+        <img
+          className="w-4/5 object-contain rounded-lg border-width-6 border-solid border-light-700"
+          src={src}
+        />
+      )}
     </div>
   );
 }
