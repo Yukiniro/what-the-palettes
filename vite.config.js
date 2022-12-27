@@ -5,5 +5,20 @@ import Unocss from "unocss/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), svgr(), Unocss()],
+  plugins: [
+    react(),
+    svgr(),
+    Unocss({
+      shortcuts: {
+        "flex-center": "flex justify-center items-center"
+      },
+      theme: {
+        breakpoints: {
+          sm: "320px",
+          md: "768px",
+          lg: "1024px",
+        },
+      },
+    }),
+  ],
 });

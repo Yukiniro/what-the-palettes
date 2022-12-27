@@ -7,7 +7,7 @@ function App() {
       <h1 className="text-8 font-mono font-600 fixed top-12">
         What the palettes is?
       </h1>
-      <div className="w-screen h-128 flex">
+      <div className="w-screen md:h-128 flex sm:flex-col md:flex-row">
         <ImagePreview color="red" src="/preview.jpeg" />
         <Palettes hexs={["#F0FFFF", "#FF00FF", "#00FF00"]} />
       </div>
