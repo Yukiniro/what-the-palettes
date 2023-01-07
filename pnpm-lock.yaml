@@ -4,7 +4,7 @@ specifiers:
   '@types/react': ^18.0.25
   '@types/react-dom': ^18.0.8
   '@vitejs/plugin-react': ^1.0.7
-  bittydash: ^0.3.3
+  bittydash: ^0.4.3
   color: ^4.2.3
   eslint: ^7.12.1
   eslint-config-prettier: ^8.3.0
@@ -36,7 +36,7 @@ specifiers:
   vite-plugin-svgr: ^2.4.0
 
 dependencies:
-  bittydash: 0.3.3
+  bittydash: 0.4.3
   color: 4.2.3
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -1353,8 +1353,8 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /bittydash/0.3.3:
-    resolution: {integrity: sha512-mRTDVjSjPXjjOZUSsJjUvjcyyPO2LNfwA/DKa/TyjycftP1ZQBHsk0GKqZk90lENOJRMOBUNNXbyUsM2SPpbXQ==}
+  /bittydash/0.4.3:
+    resolution: {integrity: sha512-08Bw8PiCy7zXXEM+X9H4nAzIAHaaXPn8c51y/W8egRp7lDVQTId0I2tgos0O8pvKwPGPcAZwXojmEwthQOdBNQ==}
     dev: false
 
   /brace-expansion/1.1.11:

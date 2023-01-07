@@ -61,7 +61,9 @@ function Palettes(props: PalettesProps) {
   const { hexs } = props;
   return (
     <div className="w-1/1 md:w-1/2 flex justify-around items-center">
-      {hexs.map(hex => PalettesItem({ hex }))}
+      {hexs.map(hex => (
+        <PalettesItem key={hex} hex={hex} />
+      ))}
     </div>
   );
 }
