@@ -15,6 +15,20 @@ function ImagePreview() {
     });
   };
 
+  const handleImageClick = () => {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.onchange = (e: Event) => {
+      input.onchange = null;
+      const src = URL.createObjectURL((e.target as HTMLInputElement).files[0]);
+      dispatch({
+        type: constant.SET_IMAGE_SRC,
+        src,
+      });
+    };
+    input.click();
+  };
+
   return (
     <div
       className="w-1/1 mb-12 md:mb-0 md:w-1/2 flex-center"
@@ -24,7 +38,8 @@ function ImagePreview() {
         <img
           onLoad={onImageLoad}
           ref={imageRef}
-          className="w-4/5 h-4/5 object-scale-down rounded-lg"
+          onClick={handleImageClick}
+          className="w-4/5 h-4/5 object-scale-down rounded-lg cursor-pointer"
           src={src}
         />
       )}
