@@ -18,6 +18,7 @@ function getRGBs(imageData: ImageData): RGB[] {
   return list;
 }
 
+// https://en.wikipedia.org/wiki/Median_cut
 function getColorTypeWithBiggestRange(list: RGB[]): RgbType {
   let rMax = Number.MIN_VALUE;
   let rMin = Number.MAX_VALUE;
@@ -76,11 +77,24 @@ function medianCut(list: RGB[], depth: number): RGB[] {
     ];
   }
 
-  const middleIndex = Math.floor(list.length / 2);
+  const rgbType = getColorTypeWithBiggestRange(list);
+  const sortedList = [...list].sort((a, b) => a[rgbType] - b[rgbType]);
+  const middleIndex = Math.floor(length / 2);
   return [
-    ...medianCut(list.slice(0, middleIndex), depth + 1),
-    ...medianCut(list.slice(middleIndex), depth + 1),
+    ...medianCut(sortedList.slice(0, middleIndex), depth + 1),
+    ...medianCut(sortedList.slice(middleIndex), depth + 1),
   ];
+}
+
+// https://en.wikipedia.org/wiki/Luma_(video)
+function orderByLuminance(rgbValues: RGB[]) {
+  const calculateLuminance = (p: RGB) => {
+    return 0.2126 * p.r + 0.7152 * p.g + 0.0722 * p.b;
+  };
+
+  return rgbValues.sort((p1, p2) => {
+    return calculateLuminance(p2) - calculateLuminance(p1);
+  });
 }
 
 function getImageColors(image: HTMLImageElement): string[] {
@@ -90,9 +104,7 @@ function getImageColors(image: HTMLImageElement): string[] {
   ctx.drawImage(image, 0, 0, width, height);
   const imageData = ctx.getImageData(0, 0, width, height);
   const rgbList = getRGBs(imageData);
-  const rgbType = getColorTypeWithBiggestRange(rgbList);
-  const sortedList = [...rgbList].sort((a, b) => a[rgbType] - b[rgbType]);
-  return medianCut(sortedList, 0).map(({ r, g, b }) =>
+  return orderByLuminance(medianCut(rgbList, 0)).map(({ r, g, b }) =>
     Color(`rgb(${r}, ${g}, ${b})`).hex()
   );
 }

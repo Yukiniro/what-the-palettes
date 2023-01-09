@@ -11,7 +11,7 @@ function ImagePreview() {
   const onImageLoad = () => {
     dispatch({
       type: constant.SET_COLORS,
-      colors: getImageColors(imageRef.current).slice(0, 3),
+      colors: getImageColors(imageRef.current),
     });
   };
 
