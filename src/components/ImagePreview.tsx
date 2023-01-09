@@ -1,24 +1,24 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import constant from "../constant";
+import { DispatchContext, StateContext } from "../context";
 import { getImageColors } from "../util";
 
-type ImagePreviewProps = {
-  src?: string;
-  color?: string;
-  setColors?: (colors: string[]) => void;
-};
-
-function ImagePreview(props: ImagePreviewProps) {
-  const { src, color, setColors } = props;
+function ImagePreview() {
   const imageRef = useRef(null);
+  const { imageSrc: src, colors } = useContext(StateContext);
+  const dispatch = useContext(DispatchContext);
 
   const onImageLoad = () => {
-    setColors(getImageColors(imageRef.current).slice(0, 3));
+    dispatch({
+      type: constant.SET_COLORS,
+      colors: getImageColors(imageRef.current).slice(0, 3),
+    });
   };
 
   return (
     <div
       className="w-1/1 mb-12 md:mb-0 md:w-1/2 flex-center"
-      style={{ backgroundColor: color }}
+      style={{ backgroundColor: colors[0] }}
     >
       {src && (
         <img

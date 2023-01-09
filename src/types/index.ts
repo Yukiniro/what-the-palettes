@@ -1,3 +1,5 @@
+import { DispatchWithoutAction } from "react";
+
 type RGB = {
   r: number;
   g: number;
@@ -6,4 +8,14 @@ type RGB = {
 
 type RgbType = "r" | "g" | "b";
 
-export { RGB, RgbType };
+type GlobalState = {
+  colors: string[];
+  imageSrc: string;
+};
+
+type Action = {
+  type: string;
+  [prop: string]: any;
+};
+
+export { RGB, RgbType, GlobalState, Action };

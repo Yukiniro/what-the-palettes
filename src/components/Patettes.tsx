@@ -1,10 +1,7 @@
 import Color from "color";
-import { useMemo } from "react";
+import { useContext, useMemo } from "react";
 import { fixed } from "bittydash";
-
-type PalettesProps = {
-  hexs: string[];
-};
+import { StateContext } from "../context";
 
 type PalettesItemProps = {
   hex: string;
@@ -57,12 +54,12 @@ function PalettesItem(props: PalettesItemProps) {
   );
 }
 
-function Palettes(props: PalettesProps) {
-  const { hexs } = props;
+function Palettes() {
+  const { colors } = useContext(StateContext);
   return (
     <div className="w-1/1 md:w-1/2 flex justify-around items-center">
-      {hexs.map(hex => (
-        <PalettesItem key={hex} hex={hex} />
+      {colors.map(color => (
+        <PalettesItem key={color} hex={color} />
       ))}
     </div>
   );
