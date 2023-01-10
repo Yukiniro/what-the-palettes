@@ -10,7 +10,7 @@ export default defineConfig({
     svgr(),
     Unocss({
       shortcuts: {
-        "flex-center": "flex justify-center items-center"
+        "flex-center": "flex justify-center items-center",
       },
       theme: {
         breakpoints: {
@@ -19,6 +19,17 @@ export default defineConfig({
           lg: "1024px",
         },
       },
+      rules: [
+        [
+          "title",
+          {
+            "text-transform": "uppercase",
+            background: "linear-gradient(to right, #ff2b6a 0%, #0ecce9 100%)",
+            "-webkit-background-clip": "text",
+            "-webkit-text-fill-color": "transparent",
+          },
+        ],
+      ],
     }),
   ],
 });

@@ -5,11 +5,11 @@ import { StoreProvider } from "./context";
 function App() {
   return (
     <StoreProvider>
-      <div className="w-screen h-screen text-center flex flex-col items-center justify-center">
-        <h1 className="text-8 font-mono font-600 fixed top-12">
+      <div className="text-center flex flex-col items-center justify-center">
+        <h1 className="title text-16 bg-clip-text font-mono font-800 p-4 m-y-4 md:m-t-12 md:m-b-28">
           What the palettes is?
         </h1>
-        <div className="w-screen md:h-128 flex sm:flex-col md:flex-row">
+        <div className="lg:w-4/5 md:w-screen md:h-128 flex sm:flex-col md:flex-row">
           <ImagePreview />
           <Palettes />
         </div>

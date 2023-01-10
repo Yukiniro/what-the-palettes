@@ -43,7 +43,7 @@ function PalettesItem(props: PalettesItemProps) {
   return (
     <div className="flex flex-col items-start">
       <div
-        className="w-16 h-16 m-b-4 rounded-2 border-2 border-dark-100 border-solid shadow-light-100"
+        className="w-16 h-16 lg:w-16 lg:h-16 md:w-14 md:h-14 m-b-4 rounded-2 border-2 border-dark-100 border-solid shadow-light-100"
         style={{ backgroundColor: hex }}
       ></div>
       <Tag title="hex" text={hex} />
