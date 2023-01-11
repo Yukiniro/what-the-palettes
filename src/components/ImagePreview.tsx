@@ -40,7 +40,7 @@ function ImagePreview() {
 
   return (
     <div
-      className="w-1/1 mb-12 md:mb-0 md:w-1/2 flex-center"
+      className="w-1/1 mb-12 md:mb-0 md:w-1/2 flex-center border border-solid border-gray-300"
       style={{ backgroundColor: colors[0] }}
     >
       {src && (
