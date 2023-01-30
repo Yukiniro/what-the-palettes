@@ -16,7 +16,11 @@
   "keywords": [
     "react",
     "vite",
-    "template"
+    "color",
+    "rgb",
+    "hex",
+    "image",
+    "palettes"
   ],
   "dependencies": {
     "bittydash": "^0.4.3",
