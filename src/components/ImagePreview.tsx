@@ -2,6 +2,7 @@ import { useContext, useMemo, useRef, useState } from "react";
 import constant from "../constant";
 import { DispatchContext, StateContext } from "../context";
 import { getImageColors } from "../util";
+import { Button } from "antd";
 
 function ImagePreview() {
   const imageRef = useRef(null);
@@ -56,9 +57,9 @@ function ImagePreview() {
         />
       )}
       {isMouseIn && (
-        <div className="absolute pointer-events-none text-8 bg-gray-200 p-x-6 p-y-4 rounded-4">
+        <Button size="large" className="pointer-events-none absolute">
           Upload Image
-        </div>
+        </Button>
       )}
     </div>
   );
