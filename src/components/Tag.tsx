@@ -7,6 +7,8 @@ type TagProps = {
   text: string;
 };
 
+const copyText = "Copied";
+
 function Tag(props: TagProps) {
   const { title, text } = props;
   const targetRef = useRef(null);
@@ -24,14 +26,14 @@ function Tag(props: TagProps) {
 
     clipboard.on("success", e => {
       message.open({
-        content: e.text,
+        content: `${e.text} ${copyText}`,
         type: "info",
       });
     });
 
     clipboard.on("error", e => {
       message.open({
-        content: e.text,
+        content: `${e.text} ${copyText}`,
         type: "error",
       });
     });

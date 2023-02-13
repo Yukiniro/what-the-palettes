@@ -10,7 +10,7 @@ function App() {
         <h1 className="title text-16 bg-clip-text font-mono font-800 p-4 m-y-4 md:m-t-12 md:m-b-28">
           What the palettes is?
         </h1>
-        <div className="lg:w-4/5 md:w-screen md:h-128 flex sm:flex-col md:flex-row">
+        <div className="lg:w-4/5 md:w-screen md:h-128 flex justify-between sm:flex-col md:flex-row">
           <ImagePreview />
           <Palettes />
         </div>
@@ -19,6 +19,7 @@ function App() {
           <Button
             type="link"
             href="https://github.com/Yukiniro"
+            target="_black"
             className="p-0 text-4"
           >
             Yukiniro
