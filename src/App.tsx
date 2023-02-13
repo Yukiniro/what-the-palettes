@@ -1,6 +1,7 @@
 import ImagePreview from "./components/ImagePreview";
 import Palettes from "./components/Patettes";
 import { StoreProvider } from "./context";
+import { Button } from "antd";
 
 function App() {
   return (
@@ -12,6 +13,16 @@ function App() {
         <div className="lg:w-4/5 md:w-screen md:h-128 flex sm:flex-col md:flex-row">
           <ImagePreview />
           <Palettes />
+        </div>
+        <div className="fixed bottom-2">
+          Created by{"  "}
+          <Button
+            type="link"
+            href="https://github.com/Yukiniro"
+            className="p-0 text-4"
+          >
+            Yukiniro
+          </Button>
         </div>
       </div>
     </StoreProvider>
