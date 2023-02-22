@@ -2,11 +2,13 @@ import ImagePreview from "./components/ImagePreview";
 import Palettes from "./components/Patettes";
 import { StoreProvider } from "./context";
 import { Button } from "antd";
+import GitHubCorners from '@uiw/react-github-corners';
 
 function App() {
   return (
     <StoreProvider>
       <div className="text-center flex flex-col items-center justify-center">
+        <GitHubCorners size={100} href="https://github.com/Yukiniro/what-the-palettes" />
         <h1 className="title text-16 bg-clip-text font-mono font-800 p-4 m-y-4 md:m-t-12 md:m-b-28">
           What the palettes is?
         </h1>

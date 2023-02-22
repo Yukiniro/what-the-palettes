@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/react': ^18.0.25
   '@types/react-dom': ^18.0.8
+  '@uiw/react-github-corners': ^1.5.15
   '@vitejs/plugin-react': ^1.0.7
   antd: ^5.1.7
   bittydash: ^0.4.3
@@ -38,6 +39,7 @@ specifiers:
   vite-plugin-svgr: ^2.4.0
 
 dependencies:
+  '@uiw/react-github-corners': 1.5.15_biqbaboplfbrettd7655fr4n2y
   antd: 5.1.7_biqbaboplfbrettd7655fr4n2y
   bittydash: 0.4.3
   clipboard: 2.0.11
@@ -1168,6 +1170,21 @@ packages:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
     dev: true
 
+  /@uiw/github-corners/1.5.15:
+    resolution: {integrity: sha512-L7CxmxFxYRhy0Q2ofo8+TB+bpwG0xbeS0kQ6fzmvUWSuzCQ1XlX0f0I9DCQz31rYD9Q05Y3zOoiEi3d6Rsbbhw==}
+    dev: false
+
+  /@uiw/react-github-corners/1.5.15_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-roqwlA3oG73SMYj/LUv0twsuEH2M8ScYYUt/iukiLCl8de9PQwI+j1XwvwbLtQ1TaaEI0YS3WxNyScP6i0404Q==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@uiw/github-corners': 1.5.15
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /@unocss/astro/0.48.0_vite@4.0.3:
     resolution: {integrity: sha512-MoINkgukO6YxVVEmEsY0oLWqU+Fv/dzPtUQhfsfek1mqtUbnwQ3n1xuOJ2S0eJSYmbprSuhvW/yTFVn1twsM1A==}
     dependencies:
@@ -1783,6 +1800,7 @@ packages:
 
   /compute-scroll-into-view/2.0.4:
     resolution: {integrity: sha512-y/ZA3BGnxoM/QHHQ2Uy49CLtnWPbt4tTPpEEZiEmmiWBFKjej7nEyH8Ryz54jH0MLXflUYA3Er2zUxPSJu5R+g==}
+    dev: false
 
   /concat-map/0.0.1:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
@@ -4262,6 +4280,7 @@ packages:
 
   /regenerator-runtime/0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
+    dev: false
 
   /regexp.prototype.flags/1.4.1:
     resolution: {integrity: sha512-pMR7hBVUUGI7PMA37m2ofIdQCsomVnas+Jn5UPGAHQ+/LlwKm/aTLJHdasmHRzlfeZwHiAOaRSo2rbBDm3nNUQ==}
@@ -4539,6 +4558,7 @@ packages:
 
   /string-convert/0.2.1:
     resolution: {integrity: sha512-u/1tdPl4yQnPBjnVrmdLo9gtuLvELKsAoRapekWggdiQNvvvum+jYF329d84NAa660KQw7pB2n36KrIKVoXa3A==}
+    dev: false
 
   /string-width/4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
@@ -4816,6 +4836,7 @@ packages:
 
   /toggle-selection/1.0.6:
     resolution: {integrity: sha512-BiZS+C1OS8g/q2RRbJmy59xpyghNBqrr6k5L/uKBGRsTfxmu3ffiRnd8mlGPUVayg8pvfi5urfnu8TU7DVOkLQ==}
+    dev: false
 
   /totalist/3.0.0:
     resolution: {integrity: sha512-eM+pCBxXO/njtF7vdFsHuqb+ElbxqtI4r5EAvk6grfAFyJ6IvWlSkfZ5T9ozC6xWw3Fj1fGoSmrl0gUs46JVIw==}

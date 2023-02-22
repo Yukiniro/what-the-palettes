@@ -1,6 +1,6 @@
 {
   "name": "what-the-palettes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -23,6 +23,7 @@
     "palettes"
   ],
   "dependencies": {
+    "@uiw/react-github-corners": "^1.5.15",
     "antd": "^5.1.7",
     "bittydash": "^0.4.3",
     "clipboard": "^2.0.11",
