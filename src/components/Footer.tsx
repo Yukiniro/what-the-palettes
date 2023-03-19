@@ -2,7 +2,7 @@ import { Button } from "antd";
 
 function Footer() {
   return (
-    <div className="fixed bottom-2">
+    <div className="fixed bottom-0 bg-white w-screen h-12 vertical-middle">
       Created by{"  "}
       <Button
         type="link"

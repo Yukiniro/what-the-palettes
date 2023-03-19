@@ -1,16 +1,18 @@
 import ClipboardJS from "clipboard";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { message } from "antd";
 
 type TagProps = {
   title: string;
   text: string;
+  color: string;
 };
 
 const copyText = "Copied";
 
 function Tag(props: TagProps) {
-  const { title, text } = props;
+  const { title, text, color } = props;
+  const [style, setStyle] = useState({ borderColor: "transparent" });
   const targetRef = useRef(null);
 
   useEffect(() => {
@@ -43,10 +45,16 @@ function Tag(props: TagProps) {
     };
   }, [title, text]);
 
+  const mouseEnter = () => setStyle({ borderColor: color });
+  const mouseLeave = () => setStyle({ borderColor: "transparent" });
+
   return (
     <div
       ref={targetRef}
-      className="text-left p-2 mt-2 mb-2 w-1/1 rounded-2 hover:bg-light-600 cursor-pointer"
+      style={style}
+      onMouseEnter={mouseEnter}
+      onMouseLeave={mouseLeave}
+      className="text-left p-2 mt-2 mb-2 w-1/1 rounded-2 cursor-pointer transition-all transition-300 border-solid border-2"
     >
       <p className="text-size-4 uppercase mb-2">{title}</p>
       <p className="text-size-2">{text}</p>

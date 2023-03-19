@@ -24,15 +24,15 @@ function PalettesItem(props: PalettesItemProps) {
   }, [color]);
 
   return (
-    <div className="flex flex-col items-start">
+    <div className="flex flex-2 justify-around flex-col items-start">
       <div
-        className="w-16 h-16 lg:w-16 lg:h-16 md:w-14 md:h-14 m-b-4 rounded-2 border-2 border-dark-100 border-solid shadow-light-100"
+        className="w-1/1 h-16 lg:h-16 md:h-14 m-b-4 rounded-2 border-2 border-dark-100 border-solid shadow-light-100"
         style={{ backgroundColor: hex }}
       ></div>
-      <Tag title="hex" text={hex} />
-      <Tag title="rgb" text={rgb} />
-      <Tag title="hsl" text={hsl} />
-      <Tag title="cmyk" text={cmyk} />
+      <Tag title="hex" text={hex} color={hex} />
+      <Tag title="rgb" text={rgb} color={hex} />
+      <Tag title="hsl" text={hsl} color={hex} />
+      <Tag title="cmyk" text={cmyk} color={hex} />
     </div>
   );
 }
